@@ -6,18 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
     <script src="assets/javascript/game.js"></script>
 </head>
 <body>
+    <audio id="myAudio">
+        <source src="assets/sounds/Gypsy Caravan - Mystery Blue.mp3">
+    </audio> 
     <div id="container">
         <h1>The Psychic Game</h1>
+        <button onclick="playAudio()" type="button">Play Music</button>
+        <button onclick="pauseAudio()" type="button">Pause Music</button> 
         <h3>Go ahead...Guess what letter I'm thinking of!</h3>
-        <h3 id="wins"> Wins: </h3>
-        <h3 id="loses"> Losses: </h3>
-        <h3 id="remaining"> Guesses Remaining: </h3>
-        <h3 id="guessed"> Your Guesses so Far: </h3>
+        <p id="wins">Wins: 0</p>
+        <p id="losses">Losses: 0</p>
+        <p id="remaining">Remaining Guesses: 9</p>
+        <p id="guessed">Guessed Letters: </p>
     </div>
-    
+
+    <style>
+        body {
+            font-family: 'East Sea Dokdo', cursive;
+        }
+    </style>
 </body>
 </html>
