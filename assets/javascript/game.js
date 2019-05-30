@@ -33,13 +33,13 @@ function reset() {
 
 function chooseRandom() {
     let computerGuess = computerArray[Math.floor(Math.random()*computerArray.length)];
-    console.log(computerGuess);
     document.onkeyup = function(event) {
         let letter = event.key.toLowerCase();
         if (letter === computerGuess) {
             wins ++;
             updateWins();
             chooseRandom();
+            reset();
         } else {
             remaining --;
             guesses.push(" " + letter);
